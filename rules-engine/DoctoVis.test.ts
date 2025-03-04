@@ -7,12 +7,10 @@ import { DoctoVis } from "./DoctoVis";
 describe("VRVisitor", () => {
   const defaultDoctor = { doctorsExperience: 20 };
 
-  const testCases = [
+  [
     { rule: `"hello" = "hello"`, expected: true },
     { rule: `"hello" = "giraffe"`, expected: false },
-  ];
-
-  testCases.forEach(({ rule, expected }) => {
+  ].forEach(({ rule, expected }) => {
     it(`String comparison for rule: ${rule}`, () => {
       const tree = antlrHarness(rule);
       const result = new DoctoVis(defaultDoctor).visit(tree);
@@ -21,14 +19,30 @@ describe("VRVisitor", () => {
     });
   });
 
-  it.skip("Integer comparison with column reference ", () => {
-    const rule = "'doctorsExperience' > 19";
-    const trueContext = { doctorsExperience: 20 };
-    const falseContext = { doctorsExperience: 18 };
-    const tree = antlrHarness(rule);
-    const result = new DoctoVis().visit(tree);
+  [
+    { rule: `ISNUMBER(123)`, expected: true },
+    { rule: `ISNUMBER("abc")`, expected: false },
+  ].forEach(({ rule, expected }) => {
+    it(`Is number rule: ${rule}`, () => {
+      const tree = antlrHarness(rule);
+      const result = new DoctoVis(defaultDoctor).visit(tree);
 
-    expect(result).toBe(true); // Adjust the expected result based on your VRVisitor implementation
+      expect(result.result).toBe(expected);
+    });
+  });
+
+  [
+    {
+      rule: `ISNUMBER('doctorsExperience') = ISNUMBER("abc")`,
+      expected: false,
+    },
+  ].forEach(({ rule, expected }) => {
+    it(`Both number or neither: ${rule}`, () => {
+      const tree = antlrHarness(rule);
+      const result = new DoctoVis(defaultDoctor).visit(tree);
+
+      expect(result.result).toBe(expected);
+    });
   });
 
   function antlrHarness(rule: string): ExpressionContext {

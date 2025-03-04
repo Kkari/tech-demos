@@ -105,7 +105,7 @@ export default class VRParser extends Parser {
 			let _alt: number;
 			this.enterOuterAlt(localctx, 1);
 			{
-			this.state = 38;
+			this.state = 39;
 			this._errHandler.sync(this);
 			switch ( this._interp.adaptivePredict(this._input, 2, this._ctx) ) {
 			case 1:
@@ -170,7 +170,7 @@ export default class VRParser extends Parser {
 				this.state = 18;
 				this.match(VRParser.T__6);
 				this.state = 19;
-				this.match(VRParser.COLUMN);
+				this.expression(0);
 				this.state = 20;
 				this.match(VRParser.T__1);
 				}
@@ -180,15 +180,15 @@ export default class VRParser extends Parser {
 				localctx = new EqualsIgnoreCaseExpContext(this, localctx);
 				this._ctx = localctx;
 				_prevctx = localctx;
-				this.state = 21;
+				this.state = 22;
 				this.match(VRParser.T__7);
 				{
-				this.state = 22;
+				this.state = 23;
 				this.match(VRParser.COLUMN);
 				}
-				this.state = 23;
-				this.match(VRParser.T__8);
 				this.state = 24;
+				this.match(VRParser.T__8);
+				this.state = 25;
 				_la = this._input.LA(1);
 				if(!(_la===18 || _la===19)) {
 				this._errHandler.recoverInline(this);
@@ -197,7 +197,7 @@ export default class VRParser extends Parser {
 					this._errHandler.reportMatch(this);
 				    this.consume();
 				}
-				this.state = 25;
+				this.state = 26;
 				this.match(VRParser.T__1);
 				}
 				break;
@@ -206,23 +206,23 @@ export default class VRParser extends Parser {
 				localctx = new InDynExpContext(this, localctx);
 				this._ctx = localctx;
 				_prevctx = localctx;
-				this.state = 26;
+				this.state = 27;
 				this.match(VRParser.COLUMN);
-				this.state = 28;
+				this.state = 29;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 				if (_la===17) {
 					{
-					this.state = 27;
+					this.state = 28;
 					this.match(VRParser.NOT);
 					}
 				}
 
-				this.state = 30;
-				this.match(VRParser.T__11);
 				this.state = 31;
-				this.match(VRParser.STRING);
+				this.match(VRParser.T__11);
 				this.state = 32;
+				this.match(VRParser.STRING);
+				this.state = 33;
 				this.match(VRParser.T__1);
 				}
 				break;
@@ -231,7 +231,7 @@ export default class VRParser extends Parser {
 				localctx = new IntegerExpContext(this, localctx);
 				this._ctx = localctx;
 				_prevctx = localctx;
-				this.state = 33;
+				this.state = 34;
 				this.match(VRParser.INTEGER);
 				}
 				break;
@@ -240,7 +240,7 @@ export default class VRParser extends Parser {
 				localctx = new DoubleExpContext(this, localctx);
 				this._ctx = localctx;
 				_prevctx = localctx;
-				this.state = 34;
+				this.state = 35;
 				this.match(VRParser.DOUBLE);
 				}
 				break;
@@ -249,7 +249,7 @@ export default class VRParser extends Parser {
 				localctx = new StrExpContext(this, localctx);
 				this._ctx = localctx;
 				_prevctx = localctx;
-				this.state = 35;
+				this.state = 36;
 				this.match(VRParser.STRING);
 				}
 				break;
@@ -258,7 +258,7 @@ export default class VRParser extends Parser {
 				localctx = new ColExpContext(this, localctx);
 				this._ctx = localctx;
 				_prevctx = localctx;
-				this.state = 36;
+				this.state = 37;
 				this.match(VRParser.COLUMN);
 				}
 				break;
@@ -267,13 +267,13 @@ export default class VRParser extends Parser {
 				localctx = new BoolExpContext(this, localctx);
 				this._ctx = localctx;
 				_prevctx = localctx;
-				this.state = 37;
+				this.state = 38;
 				this.match(VRParser.BOOLEAN);
 				}
 				break;
 			}
 			this._ctx.stop = this._input.LT(-1);
-			this.state = 57;
+			this.state = 58;
 			this._errHandler.sync(this);
 			_alt = this._interp.adaptivePredict(this._input, 4, this._ctx);
 			while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
@@ -283,18 +283,18 @@ export default class VRParser extends Parser {
 					}
 					_prevctx = localctx;
 					{
-					this.state = 55;
+					this.state = 56;
 					this._errHandler.sync(this);
 					switch ( this._interp.adaptivePredict(this._input, 3, this._ctx) ) {
 					case 1:
 						{
 						localctx = new AddSubExpContext(this, new ExpressionContext(this, _parentctx, _parentState));
 						this.pushNewRecursionContext(localctx, _startState, VRParser.RULE_expression);
-						this.state = 40;
+						this.state = 41;
 						if (!(this.precpred(this._ctx, 11))) {
 							throw this.createFailedPredicateException("this.precpred(this._ctx, 11)");
 						}
-						this.state = 41;
+						this.state = 42;
 						_la = this._input.LA(1);
 						if(!(_la===10 || _la===11)) {
 						this._errHandler.recoverInline(this);
@@ -303,7 +303,7 @@ export default class VRParser extends Parser {
 							this._errHandler.reportMatch(this);
 						    this.consume();
 						}
-						this.state = 42;
+						this.state = 43;
 						this.expression(12);
 						}
 						break;
@@ -311,13 +311,13 @@ export default class VRParser extends Parser {
 						{
 						localctx = new EqExpContext(this, new ExpressionContext(this, _parentctx, _parentState));
 						this.pushNewRecursionContext(localctx, _startState, VRParser.RULE_expression);
-						this.state = 43;
+						this.state = 44;
 						if (!(this.precpred(this._ctx, 9))) {
 							throw this.createFailedPredicateException("this.precpred(this._ctx, 9)");
 						}
-						this.state = 44;
-						this.match(VRParser.T__12);
 						this.state = 45;
+						this.match(VRParser.T__12);
+						this.state = 46;
 						this.expression(10);
 						}
 						break;
@@ -325,13 +325,13 @@ export default class VRParser extends Parser {
 						{
 						localctx = new LtExpContext(this, new ExpressionContext(this, _parentctx, _parentState));
 						this.pushNewRecursionContext(localctx, _startState, VRParser.RULE_expression);
-						this.state = 46;
+						this.state = 47;
 						if (!(this.precpred(this._ctx, 8))) {
 							throw this.createFailedPredicateException("this.precpred(this._ctx, 8)");
 						}
-						this.state = 47;
-						this.match(VRParser.T__13);
 						this.state = 48;
+						this.match(VRParser.T__13);
+						this.state = 49;
 						this.expression(9);
 						}
 						break;
@@ -339,13 +339,13 @@ export default class VRParser extends Parser {
 						{
 						localctx = new AndExpContext(this, new ExpressionContext(this, _parentctx, _parentState));
 						this.pushNewRecursionContext(localctx, _startState, VRParser.RULE_expression);
-						this.state = 49;
+						this.state = 50;
 						if (!(this.precpred(this._ctx, 7))) {
 							throw this.createFailedPredicateException("this.precpred(this._ctx, 7)");
 						}
-						this.state = 50;
-						this.match(VRParser.T__14);
 						this.state = 51;
+						this.match(VRParser.T__14);
+						this.state = 52;
 						this.expression(8);
 						}
 						break;
@@ -353,20 +353,20 @@ export default class VRParser extends Parser {
 						{
 						localctx = new OrExpContext(this, new ExpressionContext(this, _parentctx, _parentState));
 						this.pushNewRecursionContext(localctx, _startState, VRParser.RULE_expression);
-						this.state = 52;
+						this.state = 53;
 						if (!(this.precpred(this._ctx, 6))) {
 							throw this.createFailedPredicateException("this.precpred(this._ctx, 6)");
 						}
-						this.state = 53;
-						this.match(VRParser.T__15);
 						this.state = 54;
+						this.match(VRParser.T__15);
+						this.state = 55;
 						this.expression(7);
 						}
 						break;
 					}
 					}
 				}
-				this.state = 59;
+				this.state = 60;
 				this._errHandler.sync(this);
 				_alt = this._interp.adaptivePredict(this._input, 4, this._ctx);
 			}
@@ -410,27 +410,27 @@ export default class VRParser extends Parser {
 		return true;
 	}
 
-	public static readonly _serializedATN: number[] = [4,1,23,61,2,0,7,0,1,
+	public static readonly _serializedATN: number[] = [4,1,23,62,2,0,7,0,1,
 	0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,3,0,14,8,0,1,0,1,0,1,0,1,0,1,
-	0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,3,0,29,8,0,1,0,1,0,1,0,1,0,1,0,1,0,1,
-	0,1,0,3,0,39,8,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,
-	0,1,0,5,0,56,8,0,10,0,12,0,59,9,0,1,0,0,1,0,1,0,0,2,1,0,18,19,1,0,10,11,
-	76,0,38,1,0,0,0,2,3,6,0,-1,0,3,4,5,1,0,0,4,5,3,0,0,0,5,6,5,2,0,0,6,39,1,
-	0,0,0,7,8,5,3,0,0,8,9,3,0,0,0,9,10,5,4,0,0,10,13,3,0,0,0,11,12,5,5,0,0,
-	12,14,3,0,0,0,13,11,1,0,0,0,13,14,1,0,0,0,14,39,1,0,0,0,15,16,5,6,0,0,16,
-	17,5,18,0,0,17,39,5,2,0,0,18,19,5,7,0,0,19,20,5,18,0,0,20,39,5,2,0,0,21,
-	22,5,8,0,0,22,23,5,18,0,0,23,24,5,9,0,0,24,25,7,0,0,0,25,39,5,2,0,0,26,
-	28,5,18,0,0,27,29,5,17,0,0,28,27,1,0,0,0,28,29,1,0,0,0,29,30,1,0,0,0,30,
-	31,5,12,0,0,31,32,5,19,0,0,32,39,5,2,0,0,33,39,5,20,0,0,34,39,5,21,0,0,
-	35,39,5,19,0,0,36,39,5,18,0,0,37,39,5,22,0,0,38,2,1,0,0,0,38,7,1,0,0,0,
-	38,15,1,0,0,0,38,18,1,0,0,0,38,21,1,0,0,0,38,26,1,0,0,0,38,33,1,0,0,0,38,
-	34,1,0,0,0,38,35,1,0,0,0,38,36,1,0,0,0,38,37,1,0,0,0,39,57,1,0,0,0,40,41,
-	10,11,0,0,41,42,7,1,0,0,42,56,3,0,0,12,43,44,10,9,0,0,44,45,5,13,0,0,45,
-	56,3,0,0,10,46,47,10,8,0,0,47,48,5,14,0,0,48,56,3,0,0,9,49,50,10,7,0,0,
-	50,51,5,15,0,0,51,56,3,0,0,8,52,53,10,6,0,0,53,54,5,16,0,0,54,56,3,0,0,
-	7,55,40,1,0,0,0,55,43,1,0,0,0,55,46,1,0,0,0,55,49,1,0,0,0,55,52,1,0,0,0,
-	56,59,1,0,0,0,57,55,1,0,0,0,57,58,1,0,0,0,58,1,1,0,0,0,59,57,1,0,0,0,5,
-	13,28,38,55,57];
+	0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,3,0,30,8,0,1,0,1,0,1,0,1,0,1,0,1,
+	0,1,0,1,0,3,0,40,8,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,
+	0,1,0,1,0,5,0,57,8,0,10,0,12,0,60,9,0,1,0,0,1,0,1,0,0,2,1,0,18,19,1,0,10,
+	11,77,0,39,1,0,0,0,2,3,6,0,-1,0,3,4,5,1,0,0,4,5,3,0,0,0,5,6,5,2,0,0,6,40,
+	1,0,0,0,7,8,5,3,0,0,8,9,3,0,0,0,9,10,5,4,0,0,10,13,3,0,0,0,11,12,5,5,0,
+	0,12,14,3,0,0,0,13,11,1,0,0,0,13,14,1,0,0,0,14,40,1,0,0,0,15,16,5,6,0,0,
+	16,17,5,18,0,0,17,40,5,2,0,0,18,19,5,7,0,0,19,20,3,0,0,0,20,21,5,2,0,0,
+	21,40,1,0,0,0,22,23,5,8,0,0,23,24,5,18,0,0,24,25,5,9,0,0,25,26,7,0,0,0,
+	26,40,5,2,0,0,27,29,5,18,0,0,28,30,5,17,0,0,29,28,1,0,0,0,29,30,1,0,0,0,
+	30,31,1,0,0,0,31,32,5,12,0,0,32,33,5,19,0,0,33,40,5,2,0,0,34,40,5,20,0,
+	0,35,40,5,21,0,0,36,40,5,19,0,0,37,40,5,18,0,0,38,40,5,22,0,0,39,2,1,0,
+	0,0,39,7,1,0,0,0,39,15,1,0,0,0,39,18,1,0,0,0,39,22,1,0,0,0,39,27,1,0,0,
+	0,39,34,1,0,0,0,39,35,1,0,0,0,39,36,1,0,0,0,39,37,1,0,0,0,39,38,1,0,0,0,
+	40,58,1,0,0,0,41,42,10,11,0,0,42,43,7,1,0,0,43,57,3,0,0,12,44,45,10,9,0,
+	0,45,46,5,13,0,0,46,57,3,0,0,10,47,48,10,8,0,0,48,49,5,14,0,0,49,57,3,0,
+	0,9,50,51,10,7,0,0,51,52,5,15,0,0,52,57,3,0,0,8,53,54,10,6,0,0,54,55,5,
+	16,0,0,55,57,3,0,0,7,56,41,1,0,0,0,56,44,1,0,0,0,56,47,1,0,0,0,56,50,1,
+	0,0,0,56,53,1,0,0,0,57,60,1,0,0,0,58,56,1,0,0,0,58,59,1,0,0,0,59,1,1,0,
+	0,0,60,58,1,0,0,0,5,13,29,39,56,58];
 
 	private static __ATN: ATN;
 	public static get _ATN(): ATN {
@@ -731,8 +731,8 @@ export class IsNumberExpContext extends ExpressionContext {
 		super(parser, ctx.parentCtx, ctx.invokingState);
 		super.copyFrom(ctx);
 	}
-	public COLUMN(): TerminalNode {
-		return this.getToken(VRParser.COLUMN, 0);
+	public expression(): ExpressionContext {
+		return this.getTypedRuleContext(ExpressionContext, 0) as ExpressionContext;
 	}
 	// @Override
 	public accept<Result>(visitor: VRVisitor<Result>): Result {

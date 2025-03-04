@@ -5,7 +5,7 @@ Demo expression:
 'doctorExperience' > 5 AND 'uni' IN LIST("accredited_universities")
 
 Imagine something more complicated to parse:
-('salaryExpectations' < TO_EUR(SALARY('yearsOfExperience')) + 1000) OR (... AND ...)
+('salaryExpectations' < TO_EUR(LIST("salary_bands", 'yearsOfExperience')) + 1000) OR (LOWER_CASE('degree') IN ["phd", "md"])
 
 Generate code:
 antlr -visitor -no-listener -Dlanguage=TypeScript VR.g4

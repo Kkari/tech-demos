@@ -15,7 +15,7 @@ expression:
 	'(' expression ')'											# parenExp
 	| 'IF' expression 'THEN' expression ('ELSE' expression)?	# ifExp
 	| 'LOWER(' COLUMN ')'										# lowerExp
-	| 'ISNUMBER(' COLUMN ')'									# isNumberExp
+	| 'ISNUMBER(' expression ')'								# isNumberExp
 	| 'EQUALS_IGNORE_CASE(' (COLUMN) ',' (COLUMN | STRING) ')'	# equalsIgnoreCaseExp
 	| expression ('+' | '-') expression							# addSubExp
 	| COLUMN NOT? 'IN LIST(' STRING ')'							# inDynExp
